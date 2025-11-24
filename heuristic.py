@@ -409,7 +409,7 @@ def evaluate_quality(image_np):
     # 2. EARLY STOPS (critical fails)
     # -----------------------------
     friendly_reasons = []
-    if abs(angle) > 3:
+    if abs(angle) > 5:
         friendly_reasons.append(f"❌ Image not horizontally aligned ({angle:.1f}°). Hold document straight.")
         return 0, friendly_reasons, debug, image_np
     if fft_score <= 15:
