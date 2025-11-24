@@ -15,43 +15,43 @@ st.title("🛂 Passport/ID Quality Checker")
 
 
 # ---------------- Helper Functions ----------------
-
-def show_edge_examples():
-    st.markdown("### 📏 How to Capture Your Document Properly")
-    st.markdown("""
-To ensure the system detects the document edges correctly, please follow the examples below.
-Make sure the **entire document is visible**, including all **four edges and corners**.
-    """)
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown("#### ✅ Good Example")
-        st.image([
-            "C:/Users/ASUS/ImageQualityDetection/image/good.png"  # Diagram with cropped edges
-        ],
-            caption="Document fully visible with all edges exposed.",
-            use_container_width=True)
-
-    with col2:
-        st.markdown("#### ❌ Bad Example")
-        st.image([
-            "C:/Users/ASUS/ImageQualityDetection/image/bad.png"  # Diagram with cropped edges
-        ],
-            caption="Edges cut off — system may fail to detect layout.",
-            use_container_width=True)
-
-    st.markdown("""
-### 📸 Tips for Good Edge Visibility
-- Place the document **flat** on a contrasting background (table, dark surface).
-- Keep **all borders visible**. Do not zoom too much.
-- Avoid fingers covering corners.
-- Make sure the background is not too cluttered.
-- Hold camera parallel (avoid tilted angles).
-""")
-
-
-show_edge_examples()
+#
+# def show_edge_examples():
+#     st.markdown("### 📏 How to Capture Your Document Properly")
+#     st.markdown("""
+# To ensure the system detects the document edges correctly, please follow the examples below.
+# Make sure the **entire document is visible**, including all **four edges and corners**.
+#     """)
+#
+#     col1, col2 = st.columns(2)
+#
+#     with col1:
+#         st.markdown("#### ✅ Good Example")
+#         st.image([
+#             "C:/Users/ASUS/ImageQualityDetection/image/good.png"  # Diagram with cropped edges
+#         ],
+#             caption="Document fully visible with all edges exposed.",
+#             use_container_width=True)
+#
+#     with col2:
+#         st.markdown("#### ❌ Bad Example")
+#         st.image([
+#             "C:/Users/ASUS/ImageQualityDetection/image/bad.png"  # Diagram with cropped edges
+#         ],
+#             caption="Edges cut off — system may fail to detect layout.",
+#             use_container_width=True)
+#
+#     st.markdown("""
+# ### 📸 Tips for Good Edge Visibility
+# - Place the document **flat** on a contrasting background (table, dark surface).
+# - Keep **all borders visible**. Do not zoom too much.
+# - Avoid fingers covering corners.
+# - Make sure the background is not too cluttered.
+# - Hold camera parallel (avoid tilted angles).
+# """)
+#
+#
+# show_edge_examples()
 
 # ---------------- Streamlit UI ----------------
 uploaded_file = st.file_uploader("Upload passport or ID image", type=["jpg", "jpeg", "png"])
